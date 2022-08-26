@@ -3,7 +3,7 @@
 }
 
 param ($param1)
-
+write-host $param1 
 
 $wd = Randomkey
 
@@ -17,4 +17,4 @@ cd $wd
 
 echo "Rangerden selam patlamaya devam zıpıttı çıktı zıpıttı çıktı" > flag.txt
 
-Remove-Item -Path $param1\uacTest.cmd
+del $param1\uacTest.cmd
