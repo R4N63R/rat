@@ -3,7 +3,7 @@
 }
 
 param ($param1)
-$param1 
+
 
 $wd = Randomkey
 
