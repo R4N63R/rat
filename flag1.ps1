@@ -15,6 +15,6 @@ mkdir $wd
 
 cd $wd
 
-echo "Rangerden selam patlamaya devam zıpıttı çıktı zıpıttı çıktı" > flag.txt
+echo "Enes Burdaydı" > flag.txt
 
 Remove-Item -Path $NAME\uacTest.cmd
